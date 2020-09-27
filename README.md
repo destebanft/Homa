@@ -1,4 +1,4 @@
-export FLASK_APP=homa
+export FLASK_APP=Homa
 
 export FLASK_DATABASE='Homa'
 
