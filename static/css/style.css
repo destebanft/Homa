@@ -1,0 +1,19 @@
+.home{
+    background-color: #214F4B;
+}
+
+body{
+    background-color: #DAFFED;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+nav{
+background-color: #214F4B;
+}
+
+li {
+  display: inline;
+}

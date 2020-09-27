@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}Lista de tareas{% endblock %}
+{% block header %}
+    <h2 class="text-center my-3">Hola <span>{{ g.user['username'] }}</span> estas son tus tareas</h2>
+{% endblock %}
+
+{% block content %}
+<ul>
+    {% for todo in todos %}
+        <li class="">
+            <div class="home my-3 p-2 rounded">
+                <h3 class="text-white">
+                    {% if todo['completed'] == 1%}
+                        <strike>{{ todo['description'] }}</strike>
+                    {% else %}
+                        {{ todo['description'] }}
+                    {% endif %}
+                </h3>
+                <h5 class="text-white">Fecha: {{ todo['created_at'].strftime('%Y-%m-%d') }}</h5>
+                <a class="btn btn-primary" href="{{ url_for('homa.update', id=todo['id']) }}">Editar</a>
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+    {% if g.user %}
+        <a class="btn btn-success mt-3" href="{{ url_for('homa.create') }}">Agregar tarea</a>
+    {% endif %}
+{% endblock %}

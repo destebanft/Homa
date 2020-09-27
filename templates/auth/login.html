@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>{% block title %}Iniciar sesión{% endblock %}</h1>
+{% endblock %}
+
+
+{% block content %}
+
+        <form class="py-5" method="post">
+            <div class="form-group">
+                <label for="username">Usuario</label>
+                <input name="username" id="username" required/>
+            </div>
+            <div class="form-group">
+                <label for="password">Constraseña</label>
+                <input type="password" name="password" id="password" required/>
+            </div>
+
+            <input class="btn btn-success" type="submit" value="Iniciar sesión"/>
+
+        </form>
+
+{% endblock %}
