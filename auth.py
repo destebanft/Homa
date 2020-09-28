@@ -8,7 +8,7 @@ from werkzeug.security import check_password_hash, generate_password_hash
 # check_password_hash compara dos contraseñas para ver si son iguales,
 # generate_password_hash: encripta la contraseña
 
-from homa.db import get_db
+from Homa.db import get_db
 
 bp = Blueprint('auth', __name__, url_prefix='/auth')
 

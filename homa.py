@@ -3,8 +3,8 @@ from flask import (
 )
 
 from werkzeug.exceptions import abort
-from homa.auth import login_required
-from homa.db import get_db
+from Homa.auth import login_required
+from Homa.db import get_db
 
 bp = Blueprint('homa', __name__)
 
